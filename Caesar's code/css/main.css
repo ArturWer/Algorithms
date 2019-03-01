@@ -1,11 +1,14 @@
 body{
 	padding: 0;
 	margin: 0 auto;
+	background-image: url(../img/caesar.jpg);
+	background-repeat: no-repeat;
 }
 main{
 	text-align: center;
 }
 main textarea{
-	width: 500px;
+	width: 1000px;
+	height: 10rem;
 	margin: 1rem;
 }
