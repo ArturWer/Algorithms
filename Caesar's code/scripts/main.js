@@ -1,6 +1,6 @@
 "use strict";
 let userText = document.querySelector(".userText");
-let alphabetStr = "abcdefghijklmnopqrstuvwxyz\n ;:0123456789*абвгдеєёжзиіїклмнопрстуфхцчшщэюя-=+";
+let alphabetStr = "abcdefghijklmnopqrstuvwxyz\n ,.;:0123456789*абвгдеєёжзийіїклмнопрстуфхцчшщьъыэюя-=+!?/\\@#$%^()_-";
 let alphabet = alphabetStr.split("");
 let cipher = document.querySelector(".cipher");
 let decrypted = document.querySelector(".decrypted");
@@ -46,6 +46,6 @@ function decrypt(code){
 }
 userText.addEventListener("keyup", ()=>{
 	let text = userText.value;
-	encrypt(text);
+	encrypt(text.toLowerCase());
 });
 	
