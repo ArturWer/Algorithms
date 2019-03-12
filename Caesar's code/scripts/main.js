@@ -2,8 +2,9 @@
 let userText = document.querySelector(".userText");
 let alphabetEnStr = "abcdefghijklmnopqrstuvwxyz";
 let alphabet = alphabetEnStr.split("");
+let cipher = document.querySelector(".cipher");
 function showEncriptedText(text){
-
+	cipher.value = text;
 }
 function encrypt(text) {
 	let encryptText = [];
@@ -17,12 +18,12 @@ function encrypt(text) {
 	});
 	//added SPACES
 	for (let i = 0; i <= encryptText.length; i++) {
-		if (i%4 === 0) arrayWithSpaces.push(" ");
+		if ((i!==0) && (i%4 === 0)) arrayWithSpaces.push(" ");
 		arrayWithSpaces.push(encryptText[i]);
 	}
 	arrayWithSpaces = arrayWithSpaces.join('');
 	arrayWithSpaces = arrayWithSpaces.toUpperCase();
-	console.log(arrayWithSpaces);
+	showEncriptedText(arrayWithSpaces);
 }
 userText.addEventListener("keyup", ()=>{
 	let text = userText.value;
