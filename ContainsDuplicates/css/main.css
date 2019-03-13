@@ -5,3 +5,7 @@ body{
 main{
 	text-align: center;
 }
+.green{
+	background-color: green;
+	color: white;
+}
