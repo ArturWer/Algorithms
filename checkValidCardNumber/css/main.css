@@ -5,3 +5,12 @@ main{
 	text-align: center;
 	padding-top: 2rem;
 }
+.invalidCard{
+	color: red;
+	font-size: 2rem;
+}
+.validCard{
+	color: green;
+	font-size: 2rem;
+}
+

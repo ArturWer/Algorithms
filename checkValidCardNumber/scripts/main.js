@@ -1,11 +1,13 @@
 "use strict";
 let msg = document.querySelector(".msg");
 let cardClass = document.querySelector(".cardClass");
+let invalidCard = document.querySelector(".invalidCard");
 let cardNum = document.getElementById("cardNum");
 
 function validCard(number) {
 	let cardNum = number.toString();
 	let evenNumbers = [];
+	let oddNumbers = [];
 	let sum = 0;
 	cardClass.textContent = "";
 	msg.textContent = cardNum;
@@ -15,8 +17,10 @@ function validCard(number) {
 		for (var i = 0; i < cardNum.length; i++) {
 			if(i%2 === 0)
 				evenNumbers.push(cardNum[i]*2);
+			else oddNumbers.push(cardNum[i]);
 		}
 		console.log(evenNumbers);
+		console.log(oddNumbers);
 		evenNumbers.forEach((num)=>{
 			let nums;
 			if (num<10) {
@@ -27,6 +31,21 @@ function validCard(number) {
 			}
 		});
 		console.log(sum);
+		/* add odd numbers */
+		oddNumbers.forEach((num)=>{
+			sum+= Number(num);
+		});
+		console.log(sum);
+		/* validation */
+		if (sum%10 === 0) {
+			console.log(`Card number's valid`);
+			invalidCard.textContent = "Card number's valid";
+			invalidCard.className = "validCard";
+		} else {
+			console.log(`Card number's INVALID`);
+			invalidCard.textContent = "Card number's INVALID";
+			invalidCard.className = "invalidCard";
+		}
 	}
 	if (cardNum[0] === "4") {
 		cardClass.textContent = "Visa";
