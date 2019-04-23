@@ -1,0 +1,22 @@
+body{
+	padding: 0;
+	margin: 0 auto;
+	background-image: url(../img/Vigenere.jpg);
+	background-repeat: no-repeat;
+}
+main{
+	text-align: center;
+}
+main textarea{
+	width: 90%;
+	height: 10rem;
+	margin: 1rem;
+	font-weight: bold;
+	font-size: 2rem;
+}
+.cipher{
+	color: #001480;
+}
+.decrypted{
+	color: green;
+}
