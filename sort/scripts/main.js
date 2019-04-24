@@ -7,13 +7,13 @@ function getRandomInt(max){
   return Math.floor(Math.random()*Math.floor(max));
 }
 
-for (var i = 0; i < 100; i++) {
-	let num = getRandomInt(50);
+for (var i = 0; i < 10000; i++) {
+	let num = getRandomInt(5001);
 	numsArr.push(num);
 }
 console.log(`Unsorted array is: ${numsArr}`);
 
-/* Bubble sort*/
+/* Bubble sort */
 let swapCounter = -1;
 let bubbleArr = numsArr.map(x => x);
 let maxUnsort = bubbleArr.length;

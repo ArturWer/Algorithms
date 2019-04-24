@@ -5,14 +5,20 @@ body{
 	background-repeat: no-repeat;
 }
 main{
-	text-align: center;
+	text-align: right;
 }
 main textarea{
-	width: 90%;
+	width: 80%;
 	height: 10rem;
 	margin: 1rem;
 	font-weight: bold;
 	font-size: 2rem;
+}
+main h2{
+	text-align: center;
+}
+input, .key{
+	text-align: center;	
 }
 .cipher{
 	color: #001480;
