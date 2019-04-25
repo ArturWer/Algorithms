@@ -40,10 +40,10 @@ function decrypted (){
 	let cipherText = cipherArea.value;
 	let decryptedText = "";
 	let keyWord = key.value;
+	let j = 0;
 	for (var i = 0; i < cipherText.length; i++) {
 		let char = cipherText.charCodeAt(i);
 		let min = 0;
-		let j = 0;
 		let stepKeyChar;
 		if (char >= 65 && char <=90) min = 65;
 		if (char >= 97 && char <=122) min = 97;
